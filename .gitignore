@@ -130,6 +130,7 @@ dmypy.json
 
 #manual
 .vscode/
+env-dev/
 
 constants.py
 __pycache__

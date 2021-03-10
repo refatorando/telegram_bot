@@ -9,7 +9,7 @@ def start_command(update, context):
     update.message.reply_text("Digite alguma coisa.")
 
 def help_command(update, context):
-    update.message.reply_text("Digite alguma coisa.")
+    update.message.reply_text("crypto {symbol} -> retorna info sobre o symbol \n crypto update -> retorna info dos symbols favoritos")
 
 def handle_message(update, context):
     txt = str(update.message.text).lower()
