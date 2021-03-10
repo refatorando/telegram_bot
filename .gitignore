@@ -134,3 +134,4 @@ env-dev/
 
 constants.py
 __pycache__
+session.session
