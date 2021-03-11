@@ -9,14 +9,23 @@ def get_all():
     msg = ""
     msg += get_info("BTCUSDT") + "\n"
     msg += get_info("ETHUSDT") + "\n"
-    msg += get_info("ADAUSDT") + "\n"
-    msg += get_info("TRXUSDT") + "\n"
     msg += get_info("BNBUSDT") + "\n"
-    msg += get_info("DOGEUSDT") + "\n"
+    msg += get_info("ADAUSDT") + "\n"
+    msg += get_info("DOTUSDT") + "\n"
     msg += get_info("XRPUSDT") + "\n"
     msg += get_info("UNIUSDT") + "\n"
+    msg += get_info("LTCUSDT") + "\n"
     msg += get_info("LINKUSDT") + "\n"
-    msg += get_info("SUSHIUSDT") + "\n"
+    msg += get_info("BCHUSDT") + "\n"
+    msg += get_info("XLMUSDT") + "\n"
+    msg += get_info("DOGEUSDT") + "\n"
+    msg += get_info("XEMUSDT") + "\n"
+    msg += get_info("AAVEUSDT") + "\n"
+    msg += get_info("LUNAUSDT") + "\n"
+    msg += get_info("ATOMUSDT") + "\n"
+    msg += get_info("VETUSDT") + "\n"
+    msg += get_info("EOSUSDT") + "\n"
+    msg += get_info("TRXUSDT") + "\n"
 
     return msg
 
@@ -32,7 +41,7 @@ def get_info(symbol, str_interval = "8 Hour ago UTC", end_interval=None):
         if len(closes) > 20:
             np_closes = numpy.array(closes)
             rsi = calc_indicators(np_closes)
-            return f"{symbol} | RSI: {round(rsi[-1],2)} | ${latest_price}"
+            return f"{symbol:<8} | RSI: {round(rsi[-1],2)} | ${latest_price}"
 
 def calc_indicators(np_closes):
     return get_rsi(14,np_closes)
